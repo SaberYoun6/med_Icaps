@@ -14,5 +14,5 @@ CREATE TABLE appointments (
     id SERIAL PRIMARY KEY,
     patientname VARCHAR
     appointmenttime TIMESTAMP WITH TIME ZONE
-    procedure VARCHAR #change to ICD-10
+    procedure VARCHAR --change to ICD-10
 );
