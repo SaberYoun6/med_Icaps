@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'calendarium',
     'filer',
     'easy_thumbnails',
-    'mptt'
+    'mptt',
 	'schedule',
 	'djangobower',
 )
