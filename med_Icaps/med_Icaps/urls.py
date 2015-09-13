@@ -19,7 +19,7 @@ from django.contrib import admin
 import p_cal
 from p_cal import urls
 
-import calendar
+import calendarium
 
 urlpatterns = [
     url(r'', include(p_cal.urls)),
