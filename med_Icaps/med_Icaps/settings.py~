@@ -42,7 +42,6 @@ INSTALLED_APPS = (
     'mptt',
     'easy_thumbnails',
     'calendarium',
-	'home',
 )
 
 MIDDLEWARE_CLASSES = (

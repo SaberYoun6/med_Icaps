@@ -22,5 +22,7 @@ from p_cal import urls
 urlpatterns = [
     url(r'', include(p_cal.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^calendar/', include(p_cal.urls)),
+    url(r'^login/', include(p_cal.urls)),
 ]
 
