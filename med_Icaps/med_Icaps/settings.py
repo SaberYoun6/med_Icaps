@@ -38,12 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'p_cal',
-    'calendarium',
     'filer',
-    'easy_thumbnails',
     'mptt',
-	'schedule',
-	'djangobower',
+    'easy_thumbnails',
+    'calendarium',
 )
 
 MIDDLEWARE_CLASSES = (
