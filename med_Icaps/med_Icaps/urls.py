@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 import home
-from home import views, urls
+from home import urls
 
 urlpatterns = [
     url(r'', include(home.urls)),
