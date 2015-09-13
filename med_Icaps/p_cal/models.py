@@ -8,10 +8,11 @@ class Shift(models.Model):
 	shift_time_start = models.DateTimeField('Shift Start Time')
 	shift_time_end = models.DateTimeField('Shift End Time')	
 	shift_location = models.CharField(max_length=200)
-	shift_date = models.DateTimeField('Shift Date')
+	physician = models.CharField(max_length=200)
+
 
 	def __str__(self):
-		return self.shift_date
+		return self.shift_location
 	
 
 class Physician(models.Model):
@@ -19,6 +20,6 @@ class Physician(models.Model):
 	name_last = models.CharField(max_length=200)
 	specialty = models.CharField(max_length=200)
 
-	def __unicode__(self):
-		return self.name_first, self.name_last
+	def __str__(self):
+		return self.name_first + " " + self.name_last
 
