@@ -19,10 +19,12 @@ from django.contrib import admin
 import p_cal
 from p_cal import urls
 
+import calendar
+
 urlpatterns = [
     url(r'', include(p_cal.urls)),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^calendar/', include(p_cal.urls)),
+    url(r'^calendar/', include('calendarium.urls')),
     url(r'^login/', include(p_cal.urls)),
 ]
 
