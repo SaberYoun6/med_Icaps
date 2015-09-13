@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-import home
-from home import urls
+import p_cal
+from p_cal import urls
 
 urlpatterns = [
-    url(r'', include(home.urls)),
+    url(r'', include(p_cal.urls)),
     url(r'^admin/', include(admin.site.urls)),
 ]
 
