@@ -1,9 +1,7 @@
-from django.conf.urls import include, url
-
-from home import views
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
-    url(r'^home/', include('home.urls')),
-    url(r'^calendar/', include('calendarium.urls')),
+    url(r'^$', views.calendar, name='Calendar'),
 ]
 

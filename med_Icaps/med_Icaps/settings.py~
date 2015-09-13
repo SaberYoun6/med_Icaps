@@ -42,10 +42,7 @@ INSTALLED_APPS = (
     'mptt',
     'easy_thumbnails',
     'calendarium',
-<<<<<<< HEAD
 	'home',
-=======
->>>>>>> 74d570ae456d11b85d1106449f0d7c5a5bfde0e4
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,10 +70,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.core.context_processors.request',
-<<<<<<< HEAD
-=======
 				"django.core.context_processors.request"
->>>>>>> 74d570ae456d11b85d1106449f0d7c5a5bfde0e4
+<<<<<<< HEAD
+
+=======
+>>>>>>> 190aa6a1ce3c5a6e6ee1c304e6a3a0115a1634aa
             ],
         },
     },
