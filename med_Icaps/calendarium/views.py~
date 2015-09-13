@@ -127,7 +127,7 @@ class MonthView(CategoryMixin, TemplateView):
 
         req = get_request()        
         user_perm = req.user.get_all_permissions(obj=None)
-        print(user_perm)
+        
         for day in cal.itermonthdays(self.year, self.month):
             current = False
             if day:

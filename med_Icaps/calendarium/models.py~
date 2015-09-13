@@ -1,8 +1,11 @@
 """
 Models for the ``calendarium`` app.
+
 The code of these models is highly influenced by or taken from the models of
 django-schedule:
+
 https://github.com/thauber/django-schedule/tree/master/schedule/models
+
 """
 import json
 from dateutil import rrule
@@ -96,6 +99,7 @@ class EventModelMixin(models.Model):
     :end: The end date of the event.
     :creation_date: When this event was created.
     :description: The description of the event.
+
     """
     start = models.DateTimeField(
         verbose_name=_('Start date'),
@@ -133,12 +137,14 @@ class EventModelMixin(models.Model):
 class Event(EventModelMixin):
     """
     Hold the information about an event in the calendar.
+
     :created_by: FK to the ``User``, who created this event.
     :category: FK to the ``EventCategory`` this event belongs to.
     :rule: FK to the definition of the recurrence of an event.
     :end_recurring_period: The possible end of the recurring definition.
     :title: The title of the event.
     :image: Optional image of the event.
+
     """
 
     created_by = models.ForeignKey(
@@ -280,10 +286,12 @@ class Event(EventModelMixin):
 class EventCategory(models.Model):
     """
     The category of an event.
+
     :name: The name of the category.
     :slug: The slug of the category.
     :color: The color of the category.
     :parent: Allows you to create hierarchies of event categories.
+
     """
     name = models.CharField(
         max_length=256,
@@ -319,6 +327,7 @@ class EventCategory(models.Model):
 class EventRelation(models.Model):
     """
     This class allows to relate additional or external data to an event.
+
     :event: A FK to the ``Event`` this additional data is related to.
     :content_type: A FK to ContentType of the generic object.
     :object_id: The id of the generic object.
@@ -327,6 +336,7 @@ class EventRelation(models.Model):
         to relate to the same content_type several times but mean different
         things, such as (normal_guests, speakers, keynote_speakers, all being
         Guest instances)
+
     """
 
     event = models.ForeignKey(
@@ -360,12 +370,14 @@ class Occurrence(EventModelMixin):
     """
     Needed if one occurrence of an event has slightly different settings than
     all other.
+
     :created_by: FK to the ``User``, who created this event.
     :event: FK to the ``Event`` this ``Occurrence`` belongs to.
     :original_start: The original start of the related ``Event``.
     :original_end: The original end of the related ``Event``.
     :cancelled: True or false of the occurrence's cancellation status.
     :title: The title of the event.
+
     """
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -450,11 +462,13 @@ class Occurrence(EventModelMixin):
 class Rule(models.Model):
     """
     This defines the rule by which an event will recur.
+
     :name: Name of this rule.
     :description: Description of this rule.
     :frequency: A string representing the frequency of the recurrence.
     :params: JSON string to hold the exact rule parameters as used by
         dateutil.rrule to define the pattern of the recurrence.
+
     """
     name = models.CharField(
         verbose_name=_("name"),
