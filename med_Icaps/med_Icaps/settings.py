@@ -71,7 +71,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.core.context_processors.request',
 				"django.core.context_processors.request"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 190aa6a1ce3c5a6e6ee1c304e6a3a0115a1634aa
             ],
         },
     },
