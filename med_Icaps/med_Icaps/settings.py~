@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'mptt',
     'easy_thumbnails',
     'calendarium',
+	'schedule',
+	'djangobower',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,7 +71,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.core.context_processors.request',
-				"django.core.context_processors.request"
             ],
         },
     },
@@ -83,11 +84,8 @@ WSGI_APPLICATION = 'med_Icaps.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'icecapsdb',
-        'USER': 'postgres',
-        'PASSWORD':'postgres',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
