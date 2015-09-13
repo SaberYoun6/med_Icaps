@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 	'p_cal',
 	'schedule',
-	'django-bower',
+	'djangobower',
 )
 
 MIDDLEWARE_CLASSES = (
