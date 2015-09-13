@@ -38,18 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'p_cal',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'calendarium',
     'filer',
+    'mptt',
     'easy_thumbnails',
-    'mptt'
-=======
-	'schedule',
-	'djangobower',
->>>>>>> origin/master
->>>>>>> a03f21a447c513d2eb04241650d52544deeefb32
+    'calendarium',
+	'home',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,11 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-<<<<<<< HEAD
                 'django.core.context_processors.request',
-=======
-				"django.core.context_processors.request"
->>>>>>> origin/master
             ],
         },
     },
