@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^calendar', include('calendarium.urls')),
-    url(r'^login/', views.login, name="Login"),
+    #url(r'^login/', views.login, name="Login"),
 	url(r'', views.index, name='Index'),
 ]
